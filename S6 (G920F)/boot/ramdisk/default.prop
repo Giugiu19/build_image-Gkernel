@@ -38,6 +38,7 @@ ro.bootimage.build.date.utc=1490434564
 ro.bootimage.build.fingerprint=samsung/zerofltexx/zeroflte:7.0/NRD90M/G920FXXU5EQCK:user/test-keys
 #More
 ro.config.tima=0
+ro.config.knox=0
 ro.config.dmverity=false
 ro.config.rkp=false
 ro.config.kap=false
