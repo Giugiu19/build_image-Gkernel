@@ -2,6 +2,7 @@
 # ADDITIONAL_DEFAULT_PROPERTIES
 #
 telephony.lteOnCdmaDevice=0
+persist.eons.enabled=true
 persist.security.ams.enforcing=1
 ro.oem_unlock_supported=1
 ro.secure=1
@@ -39,3 +40,20 @@ ro.bootimage.build.fingerprint=samsung/zeroltexx/zerolte:7.0/NRD90M/G925FXXU5EQK
 #More
 ro.config.tima=0
 ro.config.knox=0
+ro.config.dmverity=false
+ro.config.rkp=false
+ro.config.kap=false
+ro.sec.fle.encryption=false
+ro.securestorage.support=false
+wlan.wfd.hdcp=disable
+
+#Lspeed Stuff
+persist.service.lgospd.enable=0
+persist.service.pcsync.enable=0
+ro.config.nocheckin=1
+ro.kernel.android.checkjni=0
+ro.kernel.checkjni=0
+profiler.force_disable_ulog=1
+profiler.force_disable_err_rpt=1
+ro.com.google.networklocation=0
+ro.telephony.call_ring.delay=0
