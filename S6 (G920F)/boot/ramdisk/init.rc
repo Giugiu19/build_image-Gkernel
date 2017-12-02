@@ -298,8 +298,7 @@ on init
 
     # set permission to 0660 for camera preview lagging
     chmod 0660 /sys/kernel/hmp/down_threshold 
-    # Enable 750 
-    write /sys/kernel/hmp/up_threshold 750
+
     # qtaguid will limit access to specific data based on group memberships.
     #   net_bw_acct grants impersonation of socket owners.
     #   net_bw_stats grants access to other apps' detailed tagged-socket stats.
@@ -792,7 +791,6 @@ on boot
     # parameters to match how it is managing things.
     write /proc/sys/vm/overcommit_memory 1
     write /proc/sys/vm/min_free_order_shift 4
-    write /proc/sys/vm/vfs_cache_pressure 10000
     chown root system /sys/module/lowmemorykiller/parameters/adj
     chmod 0664 /sys/module/lowmemorykiller/parameters/adj
     chown root system /sys/module/lowmemorykiller/parameters/minfree
@@ -875,7 +873,7 @@ on boot
     chmod 0660 /sys/devices/system/cpu/cpufreq/interactive/boostpulse_duration
     chown system system /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
     chmod 0660 /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
-    
+
     # Change permission for dvfshelper
     chown radio system /sys/power/cpufreq_table
     chmod 0664 /sys/power/cpufreq_table
@@ -1327,12 +1325,6 @@ on property:security.knox_afw_mode=true
 on property:security.knox_afw_mode=false
     start afw_disable
 
-on property:security.knox_ucs_mode=true
-    start ucs_enable
-on property:security.knox_ucs_mode=false
-    start ucs_disable
-on property:security.knox_ucs_mode=reset
-    start ucs_reset
 on property:ro.debuggable=1
     # Give writes to anyone for the trace folder on debug builds.
     # The folder is used to store method traces.
@@ -1473,8 +1465,6 @@ service iod /system/bin/iod
 
 on property:sys.boot_completed=1
     start iod
-    start dvfs
-    start supp_init
 
 # icd
 on property:init.svc.media=restarting
@@ -1522,17 +1512,3 @@ on property:service.vpnclientd.enable=1
     start vpnclientd
 on property:service.vpnclientd.enable=0
     stop vpnclientd
-
-service dvfs /sbin/dvfs.sh
-	class main
-	user root
-	seclabel u:r:init:s0
-	oneshot
-	disabled
-
-service supp_init /sbin/supp_init.sh
-	class main
-	user root
-	seclabel u:r:init:s0
-	oneshot
-	disabled
