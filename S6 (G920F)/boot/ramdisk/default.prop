@@ -45,7 +45,8 @@ ro.securestorage.support=false
 wlan.wfd.hdcp=disable
 
 #Gkernel Tweak
-persist.eons.enabled=true
+ro.config.hw_quickpoweron=true
+ro.ril.enable.amr.wideband=1
 windowsmgr.max_events_per_sec=90
 ro.min_pointer_dur=8
 ro.max.fling_velocity=12000
