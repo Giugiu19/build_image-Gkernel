@@ -84,9 +84,9 @@
    echo 1 > /sys/devices/14ac0000.mali/highspeed_delay
 
    # IO Scheduler
-   echo fiops > /sys/block/sda/queue/scheduler
+   echo row > /sys/block/sda/queue/scheduler
    echo 1024 > /sys/block/sda/queue/read_ahead_kb
-   echo fiops > /sys/block/mmcblk0/queue/scheduler
+   echo row > /sys/block/mmcblk0/queue/scheduler
    echo 2048 > /sys/block/mmcblk0/queue/read_ahead_kb
 
    # Wakelocks
