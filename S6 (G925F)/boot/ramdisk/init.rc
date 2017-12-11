@@ -10,6 +10,8 @@ import /init.usb.configfs.rc
 import /init.${ro.zygote}.rc
 import /init.rilcommon.rc
 import /init.fac.rc
+import /init.spectrum.rc
+
 
 on early-init
     # Set init and its forked children's oom_adj.
