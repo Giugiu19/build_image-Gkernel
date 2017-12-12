@@ -1,7 +1,6 @@
 # SPECTRUM KERNEL MANAGER
 # Ramdisk file for profile based kernel management
 # Implimentation inspired by Franco's fku profiles
-# Settings by @farovitus
 
 # Initialization
 on property:sys.boot_completed=1
