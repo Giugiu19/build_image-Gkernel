@@ -55,4 +55,3 @@ video.accelerate.hw=1
 debug.performance.tuning=1
 persist.service.lgospd.enable=0
 persist.service.pcsync.enable=0
-touch.pressure.scale=0.003
