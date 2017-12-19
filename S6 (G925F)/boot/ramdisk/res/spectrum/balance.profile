@@ -66,6 +66,12 @@
 
    # CPU HOTPLUG
    echo 1 > /sys/power/cpuhotplug/enabled
+   
+   # HMP
+   chmod 0644 /sys/kernel/hmp/up_threshold
+   write /sys/kernel/hmp/up_threshold 700
+   chmod 0644 /sys/kernel/hmp/down_threshold
+   write /sys/kernel/hmp/down_threshold 256   
 
    # GPU
    chmod 644 /sys/devices/14ac0000.mali/max_clock
@@ -86,7 +92,7 @@
    # IO Scheduler
    echo zen > /sys/block/sda/queue/scheduler
    echo 256 > /sys/block/sda/queue/read_ahead_kb
-   echo deadline > /sys/block/mmcblk0/queue/scheduler
+   echo zen > /sys/block/mmcblk0/queue/scheduler
    echo 2048 > /sys/block/mmcblk0/queue/read_ahead_kb
 
    # Wakelocks
@@ -96,12 +102,7 @@
    echo 1 > /sys/module/sec_nfc/parameters/wl_nfc
 
    # Misc
-   echo 1 > /sys/module/sync/parameters/fsync_enabled
-   echo 1 > /sys/kernel/dyn_fsync/Dyn_fsync_active
-   echo 0 > /sys/kernel/sched/gentle_fair_sleepers
-   echo 1 > /sys/kernel/sched/arch_power
    echo 3 > /sys/kernel/power_suspend/power_suspend_mode
-   echo 0 > /sys/class/lcd/panel/smart_on
    echo bic > proc/sys/net/ipv4/tcp_congestion_control
 
    # LMK

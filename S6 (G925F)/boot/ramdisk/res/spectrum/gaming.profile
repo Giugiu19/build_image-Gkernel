@@ -66,6 +66,12 @@
 
    # CPU HOTPLUG
    echo 0 > /sys/power/cpuhotplug/enabled
+   
+   # HMP
+   chmod 0644 /sys/kernel/hmp/up_threshold
+   write /sys/kernel/hmp/up_threshold 524
+   chmod 0644 /sys/kernel/hmp/down_threshold
+   write /sys/kernel/hmp/down_threshold 214   
 
    # GPU
    chmod 644 /sys/devices/14ac0000.mali/max_clock
@@ -96,12 +102,7 @@
    echo 2 > /sys/module/sec_nfc/parameters/wl_nfc
 
    # Misc
-   echo 0 > /sys/module/sync/parameters/fsync_enabled
-   echo 0 > /sys/kernel/dyn_fsync/Dyn_fsync_active
-   echo 0 > /sys/kernel/sched/gentle_fair_sleepers
-   echo 0 > /sys/kernel/sched/arch_power
    echo 3 > /sys/kernel/power_suspend/power_suspend_mode
-   echo 0 > /sys/class/lcd/panel/smart_on
    echo westwood > proc/sys/net/ipv4/tcp_congestion_control
 
    # LMK
