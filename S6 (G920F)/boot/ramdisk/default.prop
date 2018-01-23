@@ -43,15 +43,3 @@ ro.securestorage.support=false
 
 # Screen mirroring / AllShare Cast fix
 wlan.wfd.hdcp=disable
-
-#Gkernel Tweak
-ro.config.hw_quickpoweron=true
-ro.ril.enable.amr.wideband=1
-windowsmgr.max_events_per_sec=90
-ro.min_pointer_dur=8
-ro.max.fling_velocity=12000
-ro.min.fling_velocity=8000
-video.accelerate.hw=1
-debug.performance.tuning=1
-persist.service.lgospd.enable=0
-persist.service.pcsync.enable=0
