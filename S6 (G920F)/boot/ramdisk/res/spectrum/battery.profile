@@ -4,17 +4,17 @@
    chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
    echo conservative > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
    chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-   echo 130000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+   echo 200000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
    chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-   echo 1586000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+   echo 1500000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
 
    # Big CPU
    chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
    echo conservative > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
    chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-   echo 208000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+   echo 400000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
    chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
-   echo 2080000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
+   echo 2100000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
    chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/conservative/go_hispeed_load
    echo 99 > /sys/devices/system/cpu/cpu4/cpufreq/conservative/go_hispeed_load
    chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/conservative/above_hispeed_delay

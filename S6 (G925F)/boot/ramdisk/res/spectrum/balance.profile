@@ -4,9 +4,9 @@
    chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
    echo smartassV2 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
    chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-   echo 130000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+   echo 200000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
    chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-   echo 1586000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+   echo 1500000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
    chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/smartassV2/go_hispeed_load
    echo 85 > /sys/devices/system/cpu/cpu0/cpufreq/smartassV2/go_hispeed_load
    chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/smartassV2/above_hispeed_delay
@@ -36,9 +36,9 @@
    chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
    echo smartassV2 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
    chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-   echo 208000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+   echo 400000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
    chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
-   echo 2288000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
+   echo 2100000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
    chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/smartassV2/go_hispeed_load
    echo 89 > /sys/devices/system/cpu/cpu4/cpufreq/smartassV2/go_hispeed_load
    chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/smartassV2/above_hispeed_delay
