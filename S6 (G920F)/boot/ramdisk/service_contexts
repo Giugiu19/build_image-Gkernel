@@ -418,7 +418,7 @@ magazinecardservice                         u:object_r:magazinecard_service:s0
 mate_service                                u:object_r:mate_service:s0
 mdm.remotedesktop                           u:object_r:remotedesktop_service:s0
 mDNIe                                       u:object_r:mDNIe_service:s0
-media.air                                   u:object_r:airserver_service:s0
+media.air                                   u:object_r:visiond_service:s0
 media.mediacapture                          u:object_r:mediaserver_service:s0
 media.transcoder                            u:object_r:mediaserver_service:s0
 media.wifi_display                          u:object_r:surfaceflinger_service:s0

@@ -360,10 +360,6 @@ on boot
     # CPU Idle
     chown system system /sys/module/cpuidle_exynos64/parameters/enable_mask
 
-# RTC logging daemon
-    chmod 0770 /system/bin/rtc_log.sh
-    chown system system /system/bin/rtc_log.sh
-
 # mobicore
     chmod 0660 /dev/t-base-tui
     chown system system /dev/t-base-tui
@@ -844,14 +840,6 @@ service swapon /sbin/sswap -s -f 2048
     user root
     group root
     seclabel u:r:sswap:s0
-    oneshot
-
-# RTC logging daemon
-service rtc_log /system/bin/rtc_log.sh
-    class main
-    user system
-    group system
-    seclabel u:r:rtc_log:s0
     oneshot
 
 # sem_daemon

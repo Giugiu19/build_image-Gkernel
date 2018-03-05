@@ -25,12 +25,16 @@ dalvik.vm.image-dex2oat-Xmx=64m
 dalvik.vm.dex2oat-Xms=64m
 dalvik.vm.dex2oat-Xmx=512m
 ro.dalvik.vm.native.bridge=0
+dalvik.vm.usejit=true
+dalvik.vm.usejitprofiles=true
+dalvik.vm.appimageformat=lz4
+debug.atrace.tags.enableflags=0
 #
 # BOOTIMAGE_BUILD_PROPERTIES
 #
-ro.bootimage.build.date=Sat Mar 25 18:36:04 KST 2017
-ro.bootimage.build.date.utc=1490434564
-ro.bootimage.build.fingerprint=samsung/zerofltexx/zeroflte:7.0/NRD90M/G920FXXU5EQCK:user/test-keys
+ro.bootimage.build.date=Mon Sep 18 19:11:21 KST 2017
+ro.bootimage.build.date.utc=1505729481
+ro.bootimage.build.fingerprint=samsung/zerofltexx/zeroflte:7.0/NRD90M/G920FXXU5EQI6:user/test-keys
 
 # SELinux & KNOX related
 ro.config.tima=0
